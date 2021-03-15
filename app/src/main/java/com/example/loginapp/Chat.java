@@ -19,7 +19,7 @@ public class Chat extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Chat.this, HomeActivity.class);
-                
+                startActivity(intent);
             }
         });
     }
