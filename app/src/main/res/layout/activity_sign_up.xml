@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="5dp"
+    android:background="@drawable/anhnen"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_marginStart="30dp"
+            android:layout_gravity="center"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/smoking"
+            android:layout_marginLeft="30dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginStart="5dp"
+            android:text="Sign Up"
+            android:textColor="@color/white"
+            android:textSize="50sp"
+            android:layout_marginLeft="5dp" />
+    </LinearLayout>
+
+    <TextView
+        android:text="NAME"
+        android:textSize="20sp"
+        android:layout_marginTop="5dp"
+        android:textColor="#FFEB3B"
+        android:layout_marginStart="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp" />
+
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:text="username"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+    <TextView
+        android:text="EMAIL"
+        android:textSize="20sp"
+        android:layout_marginTop="5dp"
+        android:textColor="#FFEB3B"
+        android:layout_marginStart="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp" />
+
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:text="email"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+    <TextView
+        android:text="PASSWORD"
+        android:textSize="20sp"
+        android:layout_marginTop="5dp"
+        android:textColor="#FFEB3B"
+        android:layout_marginStart="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp" />
+
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:text="password"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+    <TextView
+        android:text="PHONE NUMBER"
+        android:textSize="20sp"
+        android:layout_marginTop="5dp"
+        android:textColor="#FFEB3B"
+        android:layout_marginStart="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp" />
+
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:text="phone number"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+    <Button
+        android:layout_marginStart="10dp"
+        android:padding="5dp"
+        android:layout_marginEnd="10dp"
+        android:id="@+id/btn_dangky"
+        android:text="NEXT"
+        android:layout_marginTop="30dp"
+        android:textAllCaps="false"
+        android:background="@drawable/bogoc_vang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp" />
+    <TextView
+        android:id="@+id/tv_haveAccount"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Already have an account! Sign in?"/>
+</LinearLayout>
