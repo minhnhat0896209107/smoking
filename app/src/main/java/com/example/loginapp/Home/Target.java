@@ -5,23 +5,18 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.view.inputmethod.InputMethodManager;
+import android.view.WindowManager;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
-import android.widget.Toast;
 
+import com.example.loginapp.DangNhap.HomeActivity;
 import com.example.loginapp.DuLieu.Catelogy;
 import com.example.loginapp.DuLieu.CateloryAdapter;
 import com.example.loginapp.R;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import static android.R.layout.simple_dropdown_item_1line;
-import static android.R.layout.simple_spinner_item;
 
 public class Target extends AppCompatActivity{
     ImageView imgBack;
@@ -31,6 +26,12 @@ public class Target extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        View decorView = getWindow().getDecorView();
+        // Hide the status bar.
+        int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN;
+        decorView.setSystemUiVisibility(uiOptions);
         setContentView(R.layout.activity_target);
         init();
 

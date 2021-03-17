@@ -1,14 +1,18 @@
-package com.example.loginapp.Home;
+package com.example.loginapp.DangNhap;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
-import com.example.loginapp.DangNhap.MainActivity;
+import com.example.loginapp.Home.Achievement;
+import com.example.loginapp.Home.Chat;
+import com.example.loginapp.Home.Profile;
+import com.example.loginapp.Home.Target;
 import com.example.loginapp.R;
 
 public class HomeActivity extends AppCompatActivity {
@@ -17,6 +21,12 @@ public class HomeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        View decorView = getWindow().getDecorView();
+        // Hide the status bar.
+        int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN;
+        decorView.setSystemUiVisibility(uiOptions);
         setContentView(R.layout.activity_home);
 
         btnbacktoSingin = findViewById(R.id.btn_backtoSignin);

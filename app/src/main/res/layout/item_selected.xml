@@ -5,8 +5,8 @@
     <TextView
         android:text="Hello"
         android:id="@+id/tv_selected"
-        android:padding="10dp"
-        android:textSize="18sp"
+        android:padding="15dp"
+        android:textSize="20sp"
         android:gravity="center"
         android:background="@drawable/bogoc_dennhatnen"
         android:textColor="@color/white"
