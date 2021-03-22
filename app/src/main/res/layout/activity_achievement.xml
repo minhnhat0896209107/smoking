@@ -14,13 +14,14 @@
             android:id="@+id/img_backachive"
             android:layout_margin="15dp"
             android:layout_width="30dp"
-            android:layout_height="30dp"/>
+            android:layout_height="30dp"
+            android:contentDescription="@string/todo" />
 
         <androidx.appcompat.widget.Toolbar
             app:title="Achievement"
             app:titleTextColor="@color/white"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"/> />
+            android:layout_height="?attr/actionBarSize"/>
     </LinearLayout>
 
     <RelativeLayout
@@ -48,7 +49,7 @@
                 android:layout_marginStart="5dp"
                 android:layout_marginLeft="5dp"
                 android:layout_weight="1"
-                android:text="Start date"
+                android:text="@string/start_date"
                 android:textColor="@color/yellow"
                 android:textSize="15sp" />
 
@@ -59,14 +60,14 @@
                 android:textColor="@color/yellow"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="End date"/>
+                android:text="@string/end_date"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
 
                 android:layout_weight="1"
-                android:text="Target"
+                android:text="@string/target"
                 android:textColor="@color/yellow"
                 android:textSize="15sp" />
 

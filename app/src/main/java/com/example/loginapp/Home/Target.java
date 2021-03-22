@@ -35,12 +35,9 @@ public class Target extends AppCompatActivity{
         setContentView(R.layout.activity_target);
         init();
 
-        imgBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Target.this, HomeActivity.class);
-                startActivity(intent);
-            }
+        imgBack.setOnClickListener(v -> {
+            Intent intent = new Intent(Target.this, HomeActivity.class);
+            startActivity(intent);
         });
 
         spinnertarget.setAdapter(target);

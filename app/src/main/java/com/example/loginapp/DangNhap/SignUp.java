@@ -20,30 +20,20 @@ public class SignUp extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        View decorView = getWindow().getDecorView();
-        // Hide the status bar.
-        int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN;
-        decorView.setSystemUiVisibility(uiOptions);
         setContentView(R.layout.activity_sign_up);
 
         tvhaveAccount = findViewById(R.id.tv_haveAccount);
         btndangkytc = findViewById(R.id.btn_dangkytc);
 
-        tvhaveAccount.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(SignUp.this, MainActivity.class);
-                startActivity(i);
-            }
+        tvhaveAccount.setOnClickListener(v -> {
+            Intent i = new Intent(SignUp.this, MainActivity.class);
+            startActivity(i);
         });
 
-        btndangkytc.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(SignUp.this, HomeActivity.class);
-                startActivity(i);
-                Toast.makeText(SignUp.this, "Sign Up successfully", Toast.LENGTH_SHORT).show();
-            }
+        btndangkytc.setOnClickListener(v -> {
+            Intent i = new Intent(SignUp.this, HomeActivity.class);
+            startActivity(i);
+            Toast.makeText(SignUp.this, "Sign Up successfully", Toast.LENGTH_SHORT).show();
         });
     }
 }

@@ -25,12 +25,9 @@ public class ForgotPassword extends AppCompatActivity {
 
         btnback = findViewById(R.id.btn_back);
 
-        btnback.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(ForgotPassword.this, MainActivity.class);
-                startActivity(i);
-            }
+        btnback.setOnClickListener(v -> {
+            Intent i = new Intent(ForgotPassword.this, MainActivity.class);
+            startActivity(i);
         });
     }
 }

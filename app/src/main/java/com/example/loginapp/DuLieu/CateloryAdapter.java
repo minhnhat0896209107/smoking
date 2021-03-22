@@ -1,5 +1,6 @@
 package com.example.loginapp.DuLieu;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,7 +10,6 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.cardview.widget.CardView;
 
 import com.example.loginapp.R;
 
@@ -20,6 +20,7 @@ public class CateloryAdapter extends ArrayAdapter<Catelogy> {
         super(context, resource, objects);
     }
 
+    @SuppressLint("ViewHolder")
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {

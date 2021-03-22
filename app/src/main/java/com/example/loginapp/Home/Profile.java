@@ -25,12 +25,9 @@ public class Profile extends AppCompatActivity {
         setContentView(R.layout.activity_profile);
 
         imgBack = findViewById(R.id.img_backprofile);
-        imgBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Profile.this, HomeActivity.class);
-                startActivity(intent);
-            }
+        imgBack.setOnClickListener(v -> {
+            Intent intent = new Intent(Profile.this, HomeActivity.class);
+            startActivity(intent);
         });
     }
 }

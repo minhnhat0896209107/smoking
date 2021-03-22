@@ -25,12 +25,9 @@ public class Achievement extends AppCompatActivity {
         setContentView(R.layout.activity_achievement);
 
         imgBack = findViewById(R.id.img_backachive);
-        imgBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Achievement.this, HomeActivity.class);
-                startActivity(intent);
-            }
+        imgBack.setOnClickListener(v -> {
+            Intent intent = new Intent(Achievement.this, HomeActivity.class);
+            startActivity(intent);
         });
     }
 }

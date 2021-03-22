@@ -30,28 +30,19 @@ public class MainActivity extends AppCompatActivity {
         tvdangky = findViewById(R.id.tv_dangky);
         btnDangNhap = findViewById(R.id.btn_dangnhap);
 
-        tvdangky.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i= new Intent(MainActivity.this, SignUp.class);
-                startActivity(i);
-            }
+        tvdangky.setOnClickListener(v -> {
+            Intent i= new Intent(MainActivity.this, SignUp.class);
+            startActivity(i);
         });
-        tvforgot.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i= new Intent(MainActivity.this, ForgotPassword.class);
-                startActivity(i);
-            }
+        tvforgot.setOnClickListener(v -> {
+            Intent i= new Intent(MainActivity.this, ForgotPassword.class);
+            startActivity(i);
         });
 
-        btnDangNhap.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, HomeActivity.class);
-                startActivity(intent);
-                Toast.makeText(MainActivity.this, "Sign In successfully", Toast.LENGTH_SHORT).show();
-            }
+        btnDangNhap.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, HomeActivity.class);
+            startActivity(intent);
+            Toast.makeText(MainActivity.this, "Sign In successfully", Toast.LENGTH_SHORT).show();
         });
 
     }

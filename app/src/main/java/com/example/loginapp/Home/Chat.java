@@ -18,19 +18,12 @@ public class Chat extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        View decorView = getWindow().getDecorView();
-        // Hide the status bar.
-        int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN;
-        decorView.setSystemUiVisibility(uiOptions);
         setContentView(R.layout.activity_chat);
 
         imgBack = findViewById(R.id.img_backchat);
-        imgBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Chat.this, HomeActivity.class);
-                startActivity(intent);
-            }
+        imgBack.setOnClickListener(v -> {
+            Intent intent = new Intent(Chat.this, HomeActivity.class);
+            startActivity(intent);
         });
     }
 }

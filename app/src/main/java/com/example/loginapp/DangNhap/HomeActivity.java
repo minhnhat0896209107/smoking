@@ -23,10 +23,6 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        View decorView = getWindow().getDecorView();
-        // Hide the status bar.
-        int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN;
-        decorView.setSystemUiVisibility(uiOptions);
         setContentView(R.layout.activity_home);
 
         btnbacktoSingin = findViewById(R.id.btn_backtoSignin);
@@ -35,40 +31,25 @@ public class HomeActivity extends AppCompatActivity {
         profile = findViewById(R.id.profile);
         achieve = findViewById(R.id.achieve);
 
-        btnbacktoSingin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(HomeActivity.this, MainActivity.class);
-                startActivity(intent);
-            }
+        btnbacktoSingin.setOnClickListener(v -> {
+            Intent intent = new Intent(HomeActivity.this, MainActivity.class);
+            startActivity(intent);
         });
-        target.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(HomeActivity.this, Target.class);
-                startActivity(intent);
-            }
+        target.setOnClickListener(v -> {
+            Intent intent = new Intent(HomeActivity.this, Target.class);
+            startActivity(intent);
         });
-        chat.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(HomeActivity.this, Chat.class);
-                startActivity(intent);
-            }
+        chat.setOnClickListener(v -> {
+            Intent intent = new Intent(HomeActivity.this, Chat.class);
+            startActivity(intent);
         });
-        profile.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(HomeActivity.this, Profile.class);
-                startActivity(intent);
-            }
+        profile.setOnClickListener(v -> {
+            Intent intent = new Intent(HomeActivity.this, Profile.class);
+            startActivity(intent);
         });
-        achieve.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(HomeActivity.this, Achievement.class);
-                startActivity(intent);
-            }
+        achieve.setOnClickListener(v -> {
+            Intent intent = new Intent(HomeActivity.this, Achievement.class);
+            startActivity(intent);
         });
     }
 }
