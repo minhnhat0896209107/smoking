@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical"
+<RelativeLayout xmlns:tools="http://schemas.android.com/tools"
     android:background="@drawable/bacground_home"
+    android:id="@+id/activityRoot"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <LinearLayout
+        android:id="@+id/layout_toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
@@ -21,48 +23,40 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"/>
     </LinearLayout>
-    <TextView
-        android:layout_margin="10dp"
-        android:padding="10dp"
-        android:textSize="20sp"
-        android:layout_gravity="center|end"
-        android:background="@drawable/bogoc_dennhatnen"
-        android:textColor="@color/white"
-        android:text="Abcxyz\n55:16 27/02"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-    <TextView
-        android:padding="10dp"
-        android:textSize="20sp"
-        android:layout_margin="10dp"
-        android:background="@drawable/bogoc_nenxam"
-        android:textColor="@color/white"
-        android:text="Abcxyz\n55:16 27/02"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcv_message"
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layout_toolbar"
+        android:layout_above="@id/layout_bottom" />
 
     <RelativeLayout
+        android:layout_alignParentBottom="true"
+        android:id="@+id/layout_bottom"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp">
         <EditText
-            android:layout_alignParentBottom="true"
+            android:id="@+id/edt_Message"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:textSize="18sp"
-            android:padding="15dp"
-            android:layout_centerVertical="true"
-            android:text="Type message.."
-            android:background="#79352727"
-            android:textColor="@color/white" />
+            android:background="#3C655E60"
+            android:textColor="@color/white"
+            android:hint="Message..."/>
         <Button
-            android:layout_alignParentBottom="true"
             android:id="@+id/btn_send"
             android:layout_width="25dp"
             android:layout_height="25dp"
             android:layout_alignParentEnd="true"
             android:gravity="center"
-            android:layout_margin="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
             android:background="@drawable/send"
-            android:layout_alignParentRight="true" />
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp" />
     </RelativeLayout>
-</LinearLayout>
+
+</RelativeLayout>
